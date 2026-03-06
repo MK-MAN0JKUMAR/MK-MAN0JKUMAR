@@ -91,6 +91,7 @@ Go to your profile -> "Customize your pins" -> pick 3–6 flagship repos.
 - Request/response abstractions and reusable utilities
 - Config-driven environment handling
 - Reporting + logging suitable for pipelines
+**Link:** https://github.com/MK-MAN0JKUMAR/restassured-enterprise-framework
 
 ### 2) Enterprise UI Automation Framework (CI/CD-ready)
 **Repo:** `frameworkforge-sdet`  
@@ -99,6 +100,7 @@ Go to your profile -> "Customize your pins" -> pick 3–6 flagship repos.
 - Clean test structure and reusable page layers
 - Execution profile strategy for predictable runs
 - CI-friendly organization for scheduled and gated runs
+**Link:** https://github.com/MK-MAN0JKUMAR/frameworkforge-sdet
 
 ### 3) AI-assisted Playwright Automation Framework
 **Repo:** `mcp_playwright_automation`  
@@ -107,14 +109,24 @@ Go to your profile -> "Customize your pins" -> pick 3–6 flagship repos.
 - Scalable E2E suite structure
 - Controlled AI usage patterns (review gates, consistent structure)
 - Stability improvements and repeatable execution
+**Link:** https://github.com/MK-MAN0JKUMAR/mcp_playwright_automation
 
-### 4) Hybrid Framework (Selenium + Cucumber + TestNG)
+### 4) Mobile Automation Framework (Appium + BDD)
+**Repo:** `AppiumBDD_Master`  
+**What it demonstrates:** mobile automation fundamentals with BDD-style test structure and maintainable patterns  
+- BDD structure for readable mobile test scenarios
+- Reusable step definitions and utilities for stability
+- Framework base that can be extended for CI execution and reporting
+**Link:** https://github.com/MK-MAN0JKUMAR/AppiumBDD_Master
+  
+### 5) Hybrid Framework (Selenium + Cucumber + TestNG)
 **Repo:** `AutoHive_Framework`  
 **Stack:** Java, Selenium, Cucumber, TestNG  
 **What it demonstrates:** hybrid framework capabilities (DDT, evidence capture, reporting)  
 - DDT with JSON/Excel (where applicable)
 - Screenshot capture + logging + reporting
 - Parallel execution patterns (Driver Factory approach)
+**Link:** https://github.com/MK-MAN0JKUMAR/AutoHive_Framework
 
 ---
 
@@ -189,14 +201,12 @@ If images are not rendering:
 ## Contribution Graph
 GitHub’s contribution graph is visible on my profile. I optimize for **meaningful changes**: framework improvements, documentation, CI integration, stability fixes, and repeatable execution patterns.
 -->
----
+
 
 ## Contact
-<!-- Replace placeholders with your real details -->
 - **LinkedIn:** https://www.linkedin.com/in/mk-manojkumar0706
 - **Email:** mk.manojkumar0706@gmail.com
 
----
 
 <!--
 UI + PROFILE ENHANCEMENTS (Recommended, professional-only)
