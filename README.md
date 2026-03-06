@@ -6,13 +6,14 @@ PROFILE README SETUP
 3) Replace placeholders marked with: REPLACE_ME
 
 REPLACE THESE VALUES
-- GitHub username: MK-MAN0JKUMAR   (already set below)
 - LinkedIn URL:   REPLACE_ME_LINKEDIN_URL
 - Email address:  REPLACE_ME_EMAIL
 
 NOTES
-- Keep pinned repos on your profile aligned with the "Featured Engineering Work" section.
-- This README is intentionally recruiter-first: clean, technical, fast to scan.
+- Mermaid errors usually happen when (a) the code fence is not exactly ```mermaid,
+  (b) extra characters exist on the same line as the closing fence, or
+  (c) some Mermaid parsers dislike certain punctuation inside node labels.
+- The diagrams below use safer labels (no slashes, minimal punctuation).
 -->
 
 # Manoj Kumar
@@ -94,7 +95,7 @@ Go to your profile -> "Customize your pins" -> pick 3–6 flagship repos.
 ### 2) Enterprise UI Automation Framework (CI/CD-ready)
 **Repo:** `frameworkforge-sdet`  
 **Stack:** Java, Selenium, TestNG, Maven  
-**What it demonstrates:** maintainable POM design and execution profiles (local/regression/CI)  
+**What it demonstrates:** maintainable POM design and execution profiles (local, regression, CI)  
 - Clean test structure and reusable page layers
 - Execution profile strategy for predictable runs
 - CI-friendly organization for scheduled and gated runs
@@ -122,54 +123,63 @@ Go to your profile -> "Customize your pins" -> pick 3–6 flagship repos.
 ### CI/CD Pipeline (Reference)
 ```mermaid
 flowchart LR
-  A[Commit / Pull Request] --> B[CI Trigger]
-  B --> C[Build (Maven)]
-  C --> D[Smoke Suite]
-  D --> E[Regression Suite (UI/API)]
-  E --> F[Reports: Allure / Extent]
-  F --> G[Artifacts: logs/screenshots]
-  G --> H[Quality Gate: pass/fail + thresholds]
-  H -->|Pass| I[Merge / Release]
-  H -->|Fail| J[Notify + Triage]
+  A["Commit or Pull Request"] --> B["CI Trigger"]
+  B --> C["Build - Maven"]
+  C --> D["Smoke Suite"]
+  D --> E["Regression Suite - UI and API"]
+  E --> F["Reports - Allure and Extent"]
+  F --> G["Artifacts - logs and screenshots"]
+  G --> H{"Quality Gate"}
+  H -->|Pass| I["Merge or Release"]
+  H -->|Fail| J["Notify and Triage"]
 ```
 
 ### Automation Framework Architecture (Reference)
 ```mermaid
 flowchart TB
-  RUN[Test Runner: TestNG/Cucumber] --> SUITES[Suites / Tags / Profiles]
-  SUITES --> TESTS[Test Cases]
-  TESTS --> POM[Page Objects]
-  TESTS --> API[API Layer]
-  TESTS --> DB[DB Utilities]
-  TESTS --> DATA[Test Data (JSON/Excel)]
-  POM --> DRV[Driver Factory / Browser Config]
-  API --> HTTP[HTTP Clients (Rest-Assured / helpers)]
-  DRV --> CFG[Config & Environment Mgmt]
+  RUN["Test Runner - TestNG or Cucumber"] --> SUITES["Suites - Tags - Profiles"]
+  SUITES --> TESTS["Test Cases"]
+  TESTS --> POM["Page Objects"]
+  TESTS --> API["API Layer"]
+  TESTS --> DB["DB Utilities"]
+  TESTS --> DATA["Test Data - JSON or Excel"]
+
+  POM --> DRV["Driver Factory - Browser Config"]
+  API --> HTTP["HTTP Clients - Rest-Assured Helpers"]
+
+  DRV --> CFG["Config and Environment Mgmt"]
   HTTP --> CFG
   DB --> CFG
-  TESTS --> OBS[Observability]
-  OBS --> LOG[Logs]
-  OBS --> SS[Screenshots]
-  OBS --> REP[Allure / Extent Reports]
+
+  TESTS --> OBS["Observability"]
+  OBS --> LOG["Logs"]
+  OBS --> SS["Screenshots"]
+  OBS --> REP["Reports - Allure or Extent"]
 ```
 
 ---
 
-## GitHub Statistics Dashboard
+
 <!--
-Widgets below are the only "visuals" intentionally used.
-Clean, professional, and commonly accepted by engineering managers.
-If any widget fails to load, remove `theme=...` or switch themes.
+## GitHub Statistics Dashboard
+-->
+<!--
+If images are not rendering:
+1) Confirm your profile repo README is public.
+2) Wait a few minutes; GitHub sometimes caches README images.
+3) Open each image URL in a browser to verify it loads.
+4) If blocked/limited, add `&cache_seconds=21600` and try again.
 -->
 
+<!--
 ### Overview
-[![GitHub Readme Stats](https://github-readme-stats.vercel.app/api?username=MK-MAN0JKUMAR&show_icons=true&hide_title=true&include_all_commits=true&count_private=true&rank_icon=github&theme=default)](https://github.com/MK-MAN0JKUMAR)
+[![GitHub Readme Stats](https://github-readme-stats.vercel.app/api?username=MK-MAN0JKUMAR&show_icons=true&hide_title=true&include_all_commits=true&count_private=true&rank_icon=github&theme=default&cache_seconds=21600)](https://github.com/MK-MAN0JKUMAR)
 
 ### Streak
 [![GitHub Streak](https://streak-stats.demolab.com?user=MK-MAN0JKUMAR&theme=default)](https://github.com/MK-MAN0JKUMAR)
 
 ### Top Languages
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MK-MAN0JKUMAR&layout=compact&theme=default)](https://github.com/MK-MAN0JKUMAR)
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MK-MAN0JKUMAR&layout=compact&theme=default&cache_seconds=21600)](https://github.com/MK-MAN0JKUMAR)
 
 ### Activity Graph
 [![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=MK-MAN0JKUMAR&theme=github-compact)](https://github.com/MK-MAN0JKUMAR)
@@ -178,43 +188,45 @@ If any widget fails to load, remove `theme=...` or switch themes.
 
 ## Contribution Graph
 GitHub’s contribution graph is visible on my profile. I optimize for **meaningful changes**: framework improvements, documentation, CI integration, stability fixes, and repeatable execution patterns.
-
+-->
 ---
 
 ## Contact
 <!-- Replace placeholders with your real details -->
-- **LinkedIn:** REPLACE_ME_LINKEDIN_URL
-- **Email:** REPLACE_ME_EMAIL
+- **LinkedIn:** https://www.linkedin.com/in/mk-manojkumar0706
+- **Email:** mk.manojkumar0706@gmail.com
 
 ---
 
 <!--
-PROFILE IMPROVEMENT CHECKLIST (Do this after adding the README)
+UI + PROFILE ENHANCEMENTS (Recommended, professional-only)
 
-PINNED REPOS (critical for recruiters)
-- Pin 3–6 repos: restassured-enterprise-framework, frameworkforge-sdet, mcp_playwright_automation, AutoHive_Framework (+ 1 optional)
+1) PINNED REPOS (high impact)
+- Pin 4 repos:
+  - restassured-enterprise-framework
+  - frameworkforge-sdet
+  - mcp_playwright_automation
+  - AutoHive_Framework
 
-REPO READMEs (make each repo recruiter-proof)
-For each featured repo, add:
-1) "Problem -> Solution -> Architecture" (5–8 lines)
-2) Tech stack and folder structure
-3) How to run locally (mvn commands / node commands)
-4) How to run in CI (GitHub Actions workflow)
-5) Sample report screenshot (Allure/Extent)
-6) Test design conventions (naming, tagging, retries policy, flaky test policy)
+2) ADD CI BADGES (signals CI readiness)
+- For each featured repo, add a GitHub Actions workflow and then add a badge at the top of that repo README.
 
-CI/CD (high leverage)
-- Add GitHub Actions workflows to at least your top 2 repos:
-  - Build + run smoke
-  - Upload reports as artifacts
-  - Optional: scheduled nightly regression
+3) MAKE EACH FEATURED REPO "RECRUITER-READY"
+Add sections:
+- Architecture overview (short)
+- Folder structure
+- How to run locally
+- How to run in CI
+- Reporting (sample screenshot)
+- Test strategy (tags, suites, retry policy, flaky policy)
 
-DOCUMENTATION (signals seniority)
-- Add an /docs folder to flagship repos with:
-  - framework-architecture.md
-  - execution-profiles.md
-  - reporting-and-artifacts.md
+4) ADD A SHORT /docs IN FLAGSHIP REPOS
+- docs/framework-architecture.md
+- docs/execution-profiles.md
+- docs/reporting-and-artifacts.md
+- docs/ci-cd.md
 
-QUALITY SIGNALS
-- Add consistent formatting, clean commits, and small PR-style changes even on personal repos.
+5) KEEP THIS PROFILE README STABLE
+- Avoid too many widgets.
+- Prefer curated engineering content over decorative elements.
 -->
